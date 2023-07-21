@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,20 +30,21 @@
     </div>
 </nav>
 <div class="container mt-3">
+    <form action="/product" method="post" enctype="application/x-www-form-urlencoded">
+        <div class="mb-3 mt-3">
+            <input type="text" class="form-control" placeholder="Enter 상품명" value="바나나" name="name">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter 상품가격" value="1000" name="price">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Enter 상품재고" value="50" name="qty">
+        </div>
+        <button type="submit" class="btn btn-primary">상품등록</button>
 
+    </form>
 </div>
-<form action="/action_page.php">
-    <div class="mb-3 mt-3">
-        <input type="text" class="form-control" placeholder="Enter 상품명">
-    </div>
-    <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Enter 상품가격">
-    </div>
-    <div class="mb-3">
-        <input type="text" class="form-control" placeholder="Enter 상품재고">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+
 </body>
 </html>
 
